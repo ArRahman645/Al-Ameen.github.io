@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Noto Sans HK', sans-serif;
+  background: lightblue;
+}
+.slider {
+  margin-bottom: 0px;
+  position: relative;
+}
+.slider .owl-item.active.center .slider-card {
+  transform: scale(1.15);
+  opacity: 1;
+  background: #ff9966; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ff5e62, #ff9966); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+}
+.slider-card {
+  width: 300px 50px;
+  height: 400px;
+  background: #fff;
+  padding: 0px 0px;
+  margin: 50px 15px 90px 15px;
+  border-radius: 5px;
+  box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
+  transform: scale(0.9);
+  opacity: 0.1;
+  transition: all 0.3s;
+}
+.slider-card img {
+  width: 100%;
+  height: 230px;
+  border-radius: 5px 5px 0px 0px;
+}
+.owl-nav .owl-prev {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+}
+.owl-nav .owl-next {
+  position: absolute;
+  top: calc(50% - 25px);
+  right: 0;
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+}
+.owl-dots {
+  text-align: center;
+}
+.owl-dots .owl-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background: #ccc !important;
+  margin-left: 3px;
+  margin-right: 3px;
+  outline: none;
+}
+.owl-dots .owl-dot.active {
+  background: #f44336 !important;
+}
+.b1 {
+  font-weight: bold;
+  border-radius: 20px;
+  width: 100px;
+  padding: 4.3px 10px;
+  margin: 20px -1px;
+  text-align: center;
+  color: black;
+  border: 2px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.b1:hover {
+  font-size: 15px;
+  padding: 2px 10px;
+  background-color: lightblue;
+  transition: 0.5s;
+}
+.b1:active {
+  opacity: 0.6;
+}
+
+/* New CSS for next buttons */
+.next-button-left,
+.next-button-right {
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  background-color: #e3f2fd;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 9999; /* Ensure buttons are above the blur */
+}
+
+.next-button-left {
+  left: 10px;
+}
+.next-button-left:hover {
+  background: rgb(0, 192, 226);
+  transition: 0.5s;
+  color: gray;
+}
+.next-button-right {
+  right: 10px;
+}
+.next-button-right:hover {
+  background: rgb(0, 192, 226);
+  transition: 0.5s;
+  color: gray;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        .slideshow {
+            margin: 0 auto;
+            padding-top: 50px;
+            height: 700px;
+            background: skyblue;
+            background-size: contain;
+            box-sizing: border-box;
+        }
+        .content {
+            margin: auto;
+            width: 190px;
+            height: -300px;
+            perspective: 1000px;
+            position: relative;
+            padding-top: 80px;
+        }
+        .content-carrousel {
+            width: 100%;
+            position: absolute;
+            float: right;
+            animation: rotar 15s infinite linear;
+            transform-style: preserve-3d;
+        }
+        .content-carrousel:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+        .content-carrousel figure {
+            width: 100%;
+            height: 220px;
+            border: 1px solid #4d444d;
+            overflow: hidden;
+            position: absolute;
+        }
+        .content-carrousel figure:nth-child(1) {
+            transform: rotateY(0deg) translateZ(300px);
+        }
+        .content-carrousel figure:nth-child(2) {
+            transform: rotateY(40deg) translateZ(300px);
+        }
+        .content-carrousel figure:nth-child(3) {
+            transform: rotateY(80deg) translateZ(300px);
+        }
+        .content-carrousel figure:nth-child(4) {
+            transform: rotateY(120deg) translateZ(300px);
+        }
+        .content-carrousel figure:nth-child(5) {
+            transform: rotateY(160deg) translateZ(300px);
+        }
+        .content-carrousel figure:nth-child(6) {
+            transform: rotateY(200deg) translateZ(300px);
+        }
+        .content-carrousel figure:nth-child(7) {
+            transform: rotateY(240deg) translateZ(300px);
+        }
+        .content-carrousel figure:nth-child(8) {
+            transform: rotateY(280deg) translateZ(300px);
+        }
+        .content-carrousel figure:nth-child(9) {
+            transform: rotateY(320deg) translateZ(300px);
+        }
+        .shadow {
+            position: absolute;
+            box-shadow: 0px 0px 20px 0px #000;
+            border-radius: 2px;
+        }
+        .content-carrousel img {
+            image-rendering: auto;
+            transition: all 300ms;
+            width: 100%;
+            height: 100%;
+        }
+        .content-carrousel img:hover {
+            transform: scale(1.2);
+            transition: all 300ms;
+        }
+        @keyframes rotar {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+        .back-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color:aquamarine;
+            font-weight: bold;
+            color: black;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-bottom: 40px;
+            margin-left: 730px;
+        }
+        .back-button:hover{
+            color: black;
+            background-color: white;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <section class="slideshow">
+        <div class='content'>
+            <div class="content-carrousel">
+                <figure class="shadow"><img src="thumbnail-1.webp"></figure>
+                <figure class="shadow"><img src="thumbnail-2.webp"></figure>
+                <figure class="shadow"><img src="thumbnail-3.webp"></figure>
+                <figure class="shadow"><img src="thumbnail-4.webp"></figure>
+                <figure class="shadow"><img src="thumbnail-5.webp"></figure>
+                <figure class="shadow"><img src="thumbnail-6.webp"></figure>
+                <figure class="shadow"><img src="thumbnail-7.webp"></figure>
+                <figure class="shadow"><img src="thumbnail-8.webp"></figure>
+                <figure class="shadow"><img src="thumbnail-9.webp"></figure>
+            </div>
+        </div>
+        <a href="page4.html"><button class="back-button">Back</button></a>
+    </section>
+</body>
+</html>
